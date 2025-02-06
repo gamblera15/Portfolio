@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box ;
+    font-family: century;
+}
+
+
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./9210E2B5-D4E3-4F03-85D6-C8EA4F6003A5.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.logo a{
+    color: #ff9800 ;
+    padding: 0px 20px ;
+    border: 1px solid #fff ;
+    position: absolute;
+    top: 10px ;
+    left: 10px;
+    text-transform: uppercase ;
+    text-decoration: none ;
+    font-weight: 900 ;
+    text-shadow: rgba(0, 0, 0, 0.7);
+}
+
+.logo{
+    color: rgb(2, 1, 0);
+    font-weight: bold ;
+    font-size: 2rem ;
+}
+
+ul{
+    list-style: none ;
+    float: right;
+    display: flex;
+    margin-top: 20px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px ;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: 500;
+    transition: 0.6s ease;
+}
+
+ul li a:hover{
+    background: #ff9800;
+    color: black ;
+}
+
+ul li.active a{
+    background: #ff9800;
+    color: black;
+}
+
+.prancipale{
+    max-width: 114rem ;
+    margin: 0 auto;
+}
+
+.titre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Pour centrer le texte */
+    color: #fff; /* Rendre le texte lisible sur l'image */
+}
+
+.titre h1 {
+    font-size: 4rem; /* Ajustez selon vos besoins */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Améliore la lisibilité sur un fond sombre */
+}
+
+.titre h2 {
+    font-size: 2rem; /* Plus petit que le titre principal */
+    margin-top: 1rem; /* Espacement entre le titre et le sous-titre */
+    color: #ff9800; /* Couleur différente pour le mettre en valeur */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Ombre légère pour la lisibilité */
+    font-weight: 400; /* Moins épais que le titre principal */
+}
+
+.titre h2 {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Bouton menu burger (caché par défaut) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Media Query pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Affiche le bouton burger */
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    ul {
+        display: none; /* Cache le menu par défaut */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    ul.active {
+        display: flex; /* Affiche le menu lorsqu'il est activé */
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+}
+
+
